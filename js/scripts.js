@@ -58,11 +58,13 @@ $(document).ready(function() {
       var result = "C# / .Net"
     } else var result = "Ruby / Rails";
     $(".suggestion").text(result);
-    $("#result").show();
+    $("#result").fadeIn();
+    $("#funProgramming").show();
     event.preventDefault();
   });
   $('form').on('reset', function(event) {
-    $("#result").hide();
+    $("#result").fadeOut();
+    $("#funProgramming").fadeOut();
     var drupal = parseInt(0)
     var android = parseInt(0)
     var net = parseInt(0)
