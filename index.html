@@ -7,11 +7,11 @@
     <script src="js/jquery-3.1.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
-    <title>Track Suggester</title>
+    <title>Epicodus Track Suggester</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="well text-center">Welcome to Your Track Suggester<br>
+      <h1 class="well text-center header">Welcome to Your Epicodus Track Suggester<br>
       <small>Please answer the following questions to determine a suggested track for you at Epicodus.</small></h1>
       <form class="form-inline" role="form">
         <div class="form-group">
@@ -96,7 +96,7 @@
             <div class="radio">
               <label>
                 <input type="radio" name="workType" id="business" value="business">
-                business software
+                Business software
               </label>
             </div>
             <div class="radio">
@@ -108,7 +108,69 @@
           </div>
         </fieldset>
       </form>
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="design">Do you like to make things look pretty?</label>
+          <select id="design" class="form-control" type="text">
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="data">Do you like to work with data and do math calculations?</label>
+          <select id="data" class="form-control" type="text">
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+      </form>
     </div>
-    
+    <div id="result" class="text-center">
+      <h2>According to your answers, you may want to take <span class="suggestion"></span>.</h2>
+    </div>
+    <hr>
+    <div id="classDescriptions" class="container">
+      <h1 class="text-center">Class Descriptions</h1>
+      <div id="trackCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#trackCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#trackCarousel" data-slide-to="1" class="active"></li>
+          <li data-target="#trackCarousel" data-slide-to="2" class="active"></li>
+          <li data-target="#trackCarousel" data-slide-to="3" class="active"></li>
+        </ol>
+        <div class="carousel-inner text-center" role="listbox">
+          <div class="item active">
+            <h3>C#</h3>
+            <h4 class="text-justify">
+              C# is most popular among bigger established businesses, often for building internal software. Because it's been around for a long time and has the backing of Microsoft, it is one of the most in-demand languages in the job market. C# has also been going through a bit of a rebirth lately, with Microsoft open sourcing the language and surrounding platform, porting it to run on Mac and Linux, and incorporating many of the best features of other languages. If you like the idea of working for a larger company on business software, C# is a great choice.
+            </h4>
+          </div>
+          <div class="item">
+            <h3>Java</h3>
+            <h4 class="text-justify">
+              Java is also a favorite of enterprise companies, but its appeal is broader as well: it's one of the most popular of all programming languages, and it's used in everything from for high-performance processing to building Android user interfaces. Because Java has very been popular for a very long time and is used in so many applications, it is also a very high-demand language. If you're interested in working for an enterprise-level company, as an Android developer, or in high-performance applications, Java could be a good language to learn.
+            </h4>
+          </div>
+          <div class="item">
+            <h3>PHP</h3>
+            <h4 class="text-justify">
+              PHP is most used in content-heavy websites with relatively little user interaction. The most popular content management systems - Wordpress, Drupal, and Joomla - are all written in PHP, and everything from local restaurants' websites up through large complex government deployments are built with these tools. If you're keen to work for an agency that builds websites for clients, or if you like the idea of building out sites for brands, businesses, and organizations, PHP is a great direction to go.
+            </h4>
+          </div>
+          <div class="item">
+            <h3>Ruby</h3>
+            <h4 class="text-justify">
+              Ruby is a favorite language of developers building interactive web applications. If an app involves users creating accounts, entering information, and interacting with dynamic content, there's a good chance it is built with Ruby. Ruby became popular because the Rails framework, which is written with Ruby, simplified many of the common tasks associated with building web applications. It's most popular with startups and smaller companies who are looking to build their product quickly.
+            </h4>
+          </div>
+          <a class="left carousel-control" href="#trackCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+          </a>
+          <a class="right carousel-control" href="#trackCarousel" data-slide="next">
+            <span class="icon-next"></span>
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
