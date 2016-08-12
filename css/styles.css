@@ -1,0 +1,8 @@
+body {
+  background: url(../img/background.jpg) no-repeat fixed center;
+}
+.form-group {
+  padding: 20px;
+  font-size: 20px;
+  background-color: transparent;
+}

@@ -10,6 +10,105 @@
     <title>Track Suggester</title>
   </head>
   <body>
-
+    <div class="container">
+      <h1 class="well text-center">Welcome to Your Track Suggester<br>
+      <small>Please answer the following questions to determine a suggested track for you at Epicodus.</small></h1>
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <label for="fname">First Name:</label>
+          <input id="fname" class="form-control" type="text" placeholder="First Name">
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name:</label>
+          <input id="lname" class="form-control" type="text" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+          <label for="class-start">Class Start Date:</label>
+          <input id="class-start" class="form-control" type="date">
+        </div>
+        <div class="form-group">
+          <label for="background-programming">Do you have a background in programming?</label>
+          <select class="form-control" id="background-programming">
+            <option>yes</option>
+            <option>no</option>
+          </select>
+        </div>
+        <fieldset class="form-group">
+          <div class="radio">
+            <label>
+              <input type="radio" name="backgroundLanguages" id="html" value="html">
+              HTML/CSS
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="backgroundLanguages" id="C#" value="C#">
+              C#
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="backgroundLanguages" id="VB" value="VB">
+              VB
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="backgroundLanguages" id="other" value="other">
+              other
+            </label>
+          </div>
+        </fieldset>
+      </form>
+      <form class="form-horizontal" role="form">
+        <fieldset class="form-group panel">
+          <div class="panel-body">
+            <legend>What type of company would you like to work for?</legend>
+            <div class="radio">
+              <label>
+                <input type="radio" name="companyType" id="large" value="large">
+                A large company
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="companyType" id="small" value="small">
+                A small company
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="companyType" id="start-up" value="start-up">
+                A start-up
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form-group panel">
+          <div class="panel-body">
+            <legend>What kind of work do you want to do?</legend>
+            <div class="radio">
+              <label>
+                <input type="radio" name="workType" id="phone" value="phone">
+                Smart phone applications
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="workType" id="business" value="business">
+                business software
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="workType" id="websites" value="websites">
+                Websites
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    
   </body>
 </html>
