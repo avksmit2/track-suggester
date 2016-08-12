@@ -4,9 +4,12 @@ body {
 .header {
   color: #0000ff;
 }
-.note {
+#note {
   color: yellow;
   font-style: italic;
+  float:right;
+  font-size: medium;
+  padding-left: 50px;
 }
 .form-group {
   padding: 20px;
@@ -18,7 +21,7 @@ body {
   width: 50%;
 }
 #result {
-  /*display: none;*/
+  display: none;
   color: #ffcc00;
 }
 #classDescriptions {
