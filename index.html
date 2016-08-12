@@ -6,109 +6,32 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/scripts.js"></script>
     <title>Epicodus Track Suggester</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="well text-center header">Welcome to Your Epicodus Track Suggester<br>
-      <small>Please answer the following questions to determine a suggested track for you at Epicodus.</small></h1>
-      <form class="form-inline" role="form">
-        <div class="form-group">
-          <label for="fname">First Name:</label>
-          <input id="fname" class="form-control" type="text" placeholder="First Name">
+      <h1 class="well text-center header">
+        Welcome to Your Epicodus Track Suggester<br>
+        <small>Please answer the following questions to determine a suggested track for you at Epicodus.</small></h1>
+      <h2 class="text-center note">
+        Please note, the suggestions will be according to what is available for the class that started August 1, 2016 (Java/Android and PHP/Drupal).
+      </h2>
+      <form class="form-inline" role="form" id="answers">
+        <div class="row names">
+          <div "col-form-4">
+            <div class="form-group">
+              <label for="fname">First Name:</label>
+              <input id="fname" class="form-control" type="text" placeholder="First Name">
+            </div>
+          </div>
+          <div "col-form-6">
+            <div class="form-group">
+              <label for="lname">Last Name:</label>
+              <input id="lname" class="form-control" type="text" placeholder="Last Name">
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="lname">Last Name:</label>
-          <input id="lname" class="form-control" type="text" placeholder="Last Name">
-        </div>
-        <div class="form-group">
-          <label for="class-start">Class Start Date:</label>
-          <input id="class-start" class="form-control" type="date">
-        </div>
-        <div class="form-group">
-          <label for="background-programming">Do you have a background in programming?</label>
-          <select class="form-control" id="background-programming">
-            <option>yes</option>
-            <option>no</option>
-          </select>
-        </div>
-        <fieldset class="form-group">
-          <div class="radio">
-            <label>
-              <input type="radio" name="backgroundLanguages" id="html" value="html">
-              HTML/CSS
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="backgroundLanguages" id="C#" value="C#">
-              C#
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="backgroundLanguages" id="VB" value="VB">
-              VB
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="backgroundLanguages" id="other" value="other">
-              other
-            </label>
-          </div>
-        </fieldset>
-      </form>
-      <form class="form-horizontal" role="form">
-        <fieldset class="form-group panel">
-          <div class="panel-body">
-            <legend>What type of company would you like to work for?</legend>
-            <div class="radio">
-              <label>
-                <input type="radio" name="companyType" id="large" value="large">
-                A large company
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="companyType" id="small" value="small">
-                A small company
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="companyType" id="start-up" value="start-up">
-                A start-up
-              </label>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset class="form-group panel">
-          <div class="panel-body">
-            <legend>What kind of work do you want to do?</legend>
-            <div class="radio">
-              <label>
-                <input type="radio" name="workType" id="phone" value="phone">
-                Smart phone applications
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="workType" id="business" value="business">
-                Business software
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="workType" id="websites" value="websites">
-                Websites
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </form>
-      <form class="form-inline">
         <div class="form-group">
           <label for="design">Do you like to make things look pretty?</label>
           <select id="design" class="form-control" type="text">
@@ -123,10 +46,84 @@
             <option>No</option>
           </select>
         </div>
+        <fieldset class="form-group panel">
+          <div class="panel-body">
+            <legend>What type of company would you like to work for?</legend>
+            <div class="radio">
+              <label>
+                <input type="radio" name="companyType" value="large">
+                A large company
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="companyType" value="small">
+                A small company
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="companyType" value="start-up">
+                A start-up
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form-group panel">
+          <div class="panel-body">
+            <legend>What kind of work do you want to do?</legend>
+            <div class="radio">
+              <label>
+                <input type="radio" name="workType" value="phone">
+                Smart phone applications
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="workType" value="business">
+                Business software
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="workType" value="websites">
+                Websites
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <legend>Do you have a background in programming?</legend>
+          <div class="radio">
+            <label>
+              <input type="radio" name="backgroundLanguages" value="html">
+              HTML/CSS
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="backgroundLanguages" value="C#">
+              C#
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="backgroundLanguages" value="VB">
+              VB
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="backgroundLanguages" value="other">
+              other
+            </label>
+          </div>
+        </fieldset>
+        <button class="btn btn-success btn-lg text-center" type="submit">Submit</button>
       </form>
     </div>
     <div id="result" class="text-center">
-      <h2>According to your answers, you may want to take <span class="suggestion"></span>.</h2>
+      <h2>Hi <span class="firstName"></span> <span class="lastName"></span>,  according to your answers, you may want to take <span class="suggestion"></span>.</h2>
     </div>
     <hr>
     <div id="classDescriptions" class="container">
@@ -137,30 +134,39 @@
           <li data-target="#trackCarousel" data-slide-to="1" class="active"></li>
           <li data-target="#trackCarousel" data-slide-to="2" class="active"></li>
           <li data-target="#trackCarousel" data-slide-to="3" class="active"></li>
+          <li data-target="#trackCarousel" data-slide-to="4" class="active"></li>
         </ol>
         <div class="carousel-inner text-center" role="listbox">
           <div class="item active">
-            <h3>C#</h3>
+            <h3>C# / .Net</h3>
             <h4 class="text-justify">
-              C# is most popular among bigger established businesses, often for building internal software. Because it's been around for a long time and has the backing of Microsoft, it is one of the most in-demand languages in the job market. C# has also been going through a bit of a rebirth lately, with Microsoft open sourcing the language and surrounding platform, porting it to run on Mac and Linux, and incorporating many of the best features of other languages. If you like the idea of working for a larger company on business software, C# is a great choice.
+              C# is most popular among bigger established businesses, often for building internal software. Because it's been around for a long time and has the backing of Microsoft, it is one of the most in-demand languages in the job market. C# and .NET are typically used by larger enterprises, government agencies, and companies serving enterprise and government clients. Portland companies using C# and .NET who have hired Epicodus graduates include Windsor and Incomm.
             </h4>
           </div>
           <div class="item">
-            <h3>Java</h3>
+            <h3>Java / Android</h3>
             <h4 class="text-justify">
-              Java is also a favorite of enterprise companies, but its appeal is broader as well: it's one of the most popular of all programming languages, and it's used in everything from for high-performance processing to building Android user interfaces. Because Java has very been popular for a very long time and is used in so many applications, it is also a very high-demand language. If you're interested in working for an enterprise-level company, as an Android developer, or in high-performance applications, Java could be a good language to learn.
+              Java is also a favorite of enterprise companies, but its appeal is broader as well: it's one of the most popular of all programming languages, and it's used in everything from for high-performance processing to building Android user interfaces. Because Java has very been popular for a very long time and is used in so many applications, it is also a very high-demand language. If you're interested in working for an enterprise-level company, as an Android developer, or in high-performance applications, Java could be a good language to learn.<br>
+              Android development is used in everything from phones to tablets to watches, and companies hiring Android developers range from small startups to giant enterprises.
             </h4>
           </div>
           <div class="item">
-            <h3>PHP</h3>
+            <h3>PHP / Drupal</h3>
             <h4 class="text-justify">
-              PHP is most used in content-heavy websites with relatively little user interaction. The most popular content management systems - Wordpress, Drupal, and Joomla - are all written in PHP, and everything from local restaurants' websites up through large complex government deployments are built with these tools. If you're keen to work for an agency that builds websites for clients, or if you like the idea of building out sites for brands, businesses, and organizations, PHP is a great direction to go.
+              PHP is most used in content-heavy websites with relatively little user interaction. The most popular content management systems - Wordpress, Drupal, and Joomla - are all written in PHP, and everything from local restaurants' websites up through large complex government deployments are built with these tools. If you're keen to work for an agency that builds websites for clients, or if you like the idea of building out sites for brands, businesses, and organizations, PHP is a great direction to go.<br>
+              PHP and Drupal are typically used to build content-focused websites. Portland companies using PHP and Drupal who have hired Epicodus graduates include Intel, Metal Toad, and OpenSesame.
             </h4>
           </div>
           <div class="item">
-            <h3>Ruby</h3>
+            <h3>Ruby / Rails</h3>
             <h4 class="text-justify">
-              Ruby is a favorite language of developers building interactive web applications. If an app involves users creating accounts, entering information, and interacting with dynamic content, there's a good chance it is built with Ruby. Ruby became popular because the Rails framework, which is written with Ruby, simplified many of the common tasks associated with building web applications. It's most popular with startups and smaller companies who are looking to build their product quickly.
+              Ruby is a favorite language of developers building interactive web applications. If an app involves users creating accounts, entering information, and interacting with dynamic content, there's a good chance it is built with Ruby. Ruby became popular because the Rails framework, which is written with Ruby, simplified many of the common tasks associated with building web applications. Ruby and Rails are typically used by younger companies and startups. Portland companies using Ruby and Rails who have hired Epicodus graduates include New Relic, LivingSocial, and SpendWell.
+            </h4>
+          </div>
+          <div class="item">
+            <h3>CSS / Design</h3>
+            <h4 class="text-justify">
+              CSS is one of the core languages of the web and is an integral part of front-end development. CSS – along with HTML and JavaScript – helps front-end developers control what the end user of a website can see and do. In a world dominated by big brands and big ideas, the need for skilled designers is greater than ever. Whether you’re an aspiring freelancer, a design-savvy front-end developer, or a budding UI/UX designer, this course is a launching point for anyone interested in designing beautiful, memorable web experiences.
             </h4>
           </div>
           <a class="left carousel-control" href="#trackCarousel" data-slide="prev">

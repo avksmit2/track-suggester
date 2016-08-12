@@ -4,6 +4,10 @@ body {
 .header {
   color: #0000ff;
 }
+.note {
+  color: yellow;
+  font-style: italic;
+}
 .form-group {
   padding: 20px;
   font-size: 20px;
@@ -11,6 +15,7 @@ body {
 }
 .form-group.panel {
   float: left;
+  width: 50%;
 }
 #result {
   /*display: none;*/
