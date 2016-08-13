@@ -1,6 +1,5 @@
 $(document).ready(function() {
   $("#answers").submit(function() {
-    debugger
     var drupal = parseInt(0)
     var android = parseInt(0)
     var net = parseInt(0)
@@ -8,7 +7,6 @@ $(document).ready(function() {
     var startDate = new Date($("#classDate").val());
     var startDate = parseInt(startDate.getMonth())+2;
     var design = $("#design option:selected").text();
-        debugger;
     if (startDate === 8 && design === "Yes") {
         drupal += 1;
     } else if (startDate === 8 && design === "No") {
