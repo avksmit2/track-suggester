@@ -1,12 +1,14 @@
 $(document).ready(function() {
-  var drupal = parseInt(0)
-  var android = parseInt(0)
-  var net = parseInt(0)
-  var rails = parseInt(0)
   $("#answers").submit(function() {
+    debugger
+    var drupal = parseInt(0)
+    var android = parseInt(0)
+    var net = parseInt(0)
+    var rails = parseInt(0)
     var startDate = new Date($("#classDate").val());
     var startDate = parseInt(startDate.getMonth())+2;
     var design = $("#design option:selected").text();
+        debugger;
     if (startDate === 8 && design === "Yes") {
         drupal += 1;
     } else if (startDate === 8 && design === "No") {
@@ -60,14 +62,11 @@ $(document).ready(function() {
     $(".suggestion").text(result);
     $("#result").fadeIn();
     $("#funProgramming").show();
+
     event.preventDefault();
   });
   $('form').on('reset', function(event) {
     $("#result").fadeOut();
     $("#funProgramming").fadeOut();
-    var drupal = parseInt(0)
-    var android = parseInt(0)
-    var net = parseInt(0)
-    var rails = parseInt(0)
   });
 });
